@@ -10,7 +10,7 @@ const MONGO_URI =
 console.log("here is our mongo db uri", process.env.OUR_MONGODB_URI);
 mongoose
   .connect(
-    "mongodb+srv://Joshua:evdfKyOoPIxHb5JT@finally-our-db.4gdi2.mongodb.net/?retryWrites=true&w=majority&appName=finally-our-db"
+    "mongodb+srv://vercel-admin-user-67633f31266ae74ba98cf867:GzgJYFQMYMj9OEBF@finally-our-db.4gdi2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
   )
   .then((x) => {
     const dbName = x.connections[0].name;
