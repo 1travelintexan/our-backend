@@ -6,12 +6,10 @@ const mongoose = require("mongoose");
 // If no env has been set, we dynamically set it to whatever the folder name was upon the creation of the app
 
 const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/our-backend";
+  process.env.OUR_MONGODB_URI || "mongodb://127.0.0.1:27017/our-backend";
 
 mongoose
-  .connect(
-    "mongodb+srv://Joshua:evdfKyOoPIxHb5JT@finally-our-db.4gdi2.mongodb.net/?retryWrites=true&w=majority&appName=finally-our-db"
-  )
+  .connect(MONGO_URI)
   .then((x) => {
     const dbName = x.connections[0].name;
     console.log(`Connected to Mongo! Database name: "${dbName}"`);
