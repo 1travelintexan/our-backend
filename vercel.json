@@ -12,7 +12,7 @@
       "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
     },
     {
-      "source": "/vercel_app_domain_name/(.*)",
+      "source": "/https://our-backend-git-master-1travelintexans-projects.vercel.app/(.*)",
       "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
     }
   ]
