@@ -19,6 +19,7 @@ const saltRounds = 10;
 // POST /auth/signup  - Creates a new user in the database
 router.post("/signup", (req, res, next) => {
   const { firstName, lastName, age } = req.body;
+  res.send(req.body);
 
   // // Check if email or password or name are provided as empty strings
   // if (email === "" || password === "" || name === "") {
@@ -89,7 +90,7 @@ router.post("/login", (req, res, next) => {
         const payload = { _id, email, name };
 
         // Create a JSON Web Token and sign it
-        const authToken = jwt.sign(payload, "testing", {
+        const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
           algorithm: "HS256",
           expiresIn: "6h",
         });
