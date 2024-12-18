@@ -2,9 +2,10 @@
   "name": "our-backend-server",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
