@@ -2,10 +2,10 @@
   "name": "our-backend-server",
   "version": "0.1.0",
   "private": true,
-  "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "vercel-build": "echo hello"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
