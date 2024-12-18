@@ -103,6 +103,13 @@ router.post("/login", (req, res, next) => {
     })
     .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
 });
+router.get("/users", async (req, res) => {
+  User.find()
+    .then((allUsers) => {
+      res.status(200).json({ message: "Users found.", allUsers });
+    })
+    .catch((err) => console.log(err));
+});
 
 // GET  /auth/verify  -  Used to verify JWT stored on the client
 router.get("/verify", isAuthenticated, (req, res, next) => {
