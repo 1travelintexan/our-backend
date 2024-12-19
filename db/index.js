@@ -9,7 +9,7 @@ const MONGO_URI =
   process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/our-backend";
 console.log("here is our mongo db uri", process.env.OUR_MONGODB_URI);
 mongoose
-  .connect(MONGO_URI)
+  .connect(process.env.MONGODB_URI)
   .then((x) => {
     const dbName = x.connections[0].name;
     console.log(`Connected to Mongo! Database name: "${dbName}"`);
