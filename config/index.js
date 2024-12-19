@@ -26,7 +26,14 @@ module.exports = (app) => {
       origin: [process.env.ORIGIN],
     })
   );
-  //no build and testing
+  //working cors with Babtiste
+  // app.use(
+  //   cors({
+  //     origin: "https://pawty.netlify.app", // Remplacez par l'URL exacte de votre frontend
+  //     methods: "GET,POST,PUT,DELETE", // Méthodes autorisées
+  //     allowedHeaders: "Content-Type,Authorization", // En-têtes autorisés
+  //   })
+  // );
   // In development environment the app logs
   app.use(logger("dev"));
   // To have access to `body` property in the request
